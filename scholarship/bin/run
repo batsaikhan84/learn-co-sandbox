@@ -1,7 +1,5 @@
 #!/usr/bin/env ruby
 
-
-
 CLI.new.call
 
 
