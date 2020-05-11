@@ -7,16 +7,18 @@ class CLI
     puts "Welcome to Scholarship finder!"
     puts "\n"
     input = ""
-    while input != "exit" || input_again != "exit"
+    while input != "Exit" || input_again != "exit"
       puts "Please enter academic major for the list of scholarship"
-      input = gets.strip
-      if input == "exit"
+      input = gets.strip.capitalize
+      if input == "Exit"
+        puts "Thanks you! Have a good day :)."
         break
       end
       scholarship_finder(input)
       puts "Please choose a number to see the details of scholarship"
       input_again = gets.strip
-      if input_again == "exit"
+      if input_again == "Exit"
+        "Thanks you! Have a good day :)."
         break
       end
       detail(input, input_again)
