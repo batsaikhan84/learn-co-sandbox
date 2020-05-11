@@ -6,19 +6,21 @@ class CLI
     academic_majors
     puts "Welcome to Scholarship finder!"
     puts "\n"
-    input = ""
-    while input != "Exit" || input_again != "exit"
+    puts "You can type 'exit' anytime to exit from the app."
+    intut = ""
+    while input != "Exit"
       puts "Please enter academic major for the list of scholarship"
+      
       input = gets.strip.capitalize
       if input == "Exit"
-        puts "Thanks you! Have a good day :)."
+        puts "Thank you for using our app! Have a great day."
         break
       end
       scholarship_finder(input)
       puts "Please choose a number to see the details of scholarship"
-      input_again = gets.strip
+      input_again = gets.strip.capitalize
       if input_again == "Exit"
-        "Thanks you! Have a good day :)."
+        puts "Thank you for using our app! Have a great day."
         break
       end
       detail(input, input_again)
